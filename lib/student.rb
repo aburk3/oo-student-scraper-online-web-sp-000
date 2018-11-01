@@ -14,10 +14,6 @@ class Student
     @@all << self
   end
 
-  def self.all
-    @@all
-  end
-
   def self.create_from_collection(students_array)
     students_array.each do |name_location|
       Student.new(name_location)
@@ -30,5 +26,9 @@ class Student
     end
     self
   end
-  
+
+  def self.all
+    @@all
+  end
+
 end
